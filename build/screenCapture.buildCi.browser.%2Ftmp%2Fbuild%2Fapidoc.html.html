@@ -54,12 +54,50 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-if">module gulp-if</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-if.gulp-if">
+            function <span class="apidocSignatureSpan"></span>gulp-if
+            <span class="apidocSignatureSpan">(condition, trueChild, falseChild, minimatchOptions)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-if" id="apidoc.module.gulp-if">module gulp-if</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-if.gulp-if" id="apidoc.element.gulp-if.gulp-if">
+        function <span class="apidocSignatureSpan"></span>gulp-if
+        <span class="apidocSignatureSpan">(condition, trueChild, falseChild, minimatchOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-if = function (condition, trueChild, falseChild, minimatchOptions) {
+	if (!trueChild) {
+		throw new Error('gulp-if: child action is required');
+	}
+
+	if (typeof condition === 'boolean') {
+		// no need to evaluate the condition for each file
+		// other benefit is it never loads the other stream
+		return condition ? trueChild : (falseChild || through2.obj());
+	}
+
+	function classifier (file) {
+		return !!match(file, condition, minimatchOptions);
+	}
+
+	return ternaryStream(classifier, trueChild, falseChild);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
