@@ -1,6 +1,6 @@
 # npmdoc-gulp-if
 
-#### api documentation for  [gulp-if (v2.0.2)](https://github.com/robrich/gulp-if)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-if.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-if) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-if.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-if)
+#### basic api documentation for  [gulp-if (v2.0.2)](https://github.com/robrich/gulp-if)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-if.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-if) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-if.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-if)
 
 #### Conditionally run a task
 
@@ -77,7 +77,8 @@
     "scripts": {
         "test": "mocha && jshint ."
     },
-    "version": "2.0.2"
+    "version": "2.0.2",
+    "bin": {}
 }
 ```
 
